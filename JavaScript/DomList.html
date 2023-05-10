@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="wrap">
+    <ul id="list1">
+        <li>사과</li>
+        <li>바나나1</li>
+        <li>포도</li>
+        <li>복숭아</li>
+        <li>수박</li>
+    </ul>
+
+</div>
+<script>
+    const list = document.querySelectorAll("li:nth-child(odd)");
+    for (let i = 0; i < list.length; i++) {
+        list[i].style.backgroundColor = "yellow";
+    }
+    const listEven = document.querySelectorAll("li:nth-child(even)");
+    for ($li of listEven) {
+        $li.style.backgroundColor = "navy";
+    }
+
+    const $red = document.querySelector("#list1 li");
+    $red.style.color = "red";
+
+    const $green = document.querySelector("#list1 li:last-child");
+    $green.style.color = "green";
+
+    const firstList = document.querySelectorAll("#list1 li");
+    for (let i = 3; i < firstList.length; i++) {
+        firstList[i].style.border = "2px dashed violet";
+        firstList[i].style.color = "violet";
+    }
+
+</script>
+</body>
+</html>
